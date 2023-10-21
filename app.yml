@@ -1,0 +1,10 @@
+version: 1.0
+provider:
+  name: openfaas
+  gateway: http://IP_OF_YOUR_VM:8888
+
+functions:
+  check-port-status:
+    lang: python
+    handler: ./handler.check_port_status
+    image: YOUR_DOCKERHUB_USERNAME/check-port-status:latest
